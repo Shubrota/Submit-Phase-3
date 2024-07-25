@@ -17,7 +17,7 @@ pipeline
       agent any
       steps 
       {
-         call docker build . --tag taxibooking
+         call 'docker build . --tag taxibooking'
       }
     }
   }
