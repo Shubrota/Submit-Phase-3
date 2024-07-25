@@ -17,7 +17,7 @@ pipeline
       agent any
       steps 
       {
-        sh 'docker build -t shubrota/TaxiBooking:latest .'
+        bat 'docker build -t shubrota/TaxiBooking:latest .'
       }
     }
   }
