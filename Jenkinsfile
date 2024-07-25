@@ -17,7 +17,7 @@ pipeline
       agent any
       steps 
       {
-	call docker build . -t shubrota123/TaxiBooking:latest
+	call docker build . --tag shubrota123/TaxiBooking:latest
       }
     }
   }
