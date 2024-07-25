@@ -1,4 +1,4 @@
 FROM anapsix/alpine-java 
-LABEL maintainer="shanem@liatrio.com" 
-COPY /target/spring-petclinic-1.5.1.jar /home/spring-petclinic-1.5.1.jar 
-CMD ["java","-jar","/home/spring-petclinic-1.5.1.jar"]
+LABEL maintainer="shubrota@gmail.com" 
+COPY /target/TaxiBooking-0.0.1-SNAPSHOT.jar /home/TaxiBooking-0.0.1-SNAPSHOT.jar 
+CMD ["java","-jar","/home/TaxiBooking-0.0.1-SNAPSHOT.jar"]
