@@ -9,7 +9,7 @@ pipeline
     {
       steps 
       {
-         call mvn clean install
+         call 'mvn clean install'
       }
     }
     stage('Docker Build')
