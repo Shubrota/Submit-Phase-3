@@ -1,21 +1,22 @@
 #!groovy
 
-pipeline {
-  agent none
-  stages {
-    stage('Maven Install') {
-      agent label {
-        docker {
-          image 'maven:3.5.0'
-        }
-      }
-      steps {
+pipeline 
+{
+    agent any
+  stages 
+  {
+    stage("Build") 
+    {
+      steps 
+      {
         sh 'mvn clean install'
       }
     }
-    stage('Docker Build') {
+    stage('Docker Build')
+    {
       agent any
-      steps {
+      steps 
+      {
         sh 'docker build -t shubrota/TaxiBooking:latest .'
       }
     }
