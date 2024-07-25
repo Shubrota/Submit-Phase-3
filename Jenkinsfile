@@ -9,7 +9,7 @@ pipeline
     {
       steps 
       {
-         call mvn clean install
+         sh mvn clean install
       }
     }
     stage('Docker Build')
@@ -17,7 +17,7 @@ pipeline
       agent any
       steps 
       {
-         call 'docker build . --tag taxibooking'
+         sh 'docker build . --tag taxibooking'
       }
     }
   }
