@@ -1,0 +1,23 @@
+<!-- applicationContext.xml -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Bean definition for Product using constructor-->
+	<bean id="Ride1" class="Ride" init-method="hi" destroy-method="bye">
+		<constructor-arg value="From" />
+		<constructor-arg value="Home" />
+		<constructor-arg value="99" />
+		<constructor-arg value="2" />
+	</bean>
+	
+	
+	<!-- Bean definition for Product using setter injection-->
+	<bean id="Ride2" class="Ride">
+		<property name="to" value="Office" />
+		<property name="fare" value="99" />
+	</bean>
+	
+	
+</beans>

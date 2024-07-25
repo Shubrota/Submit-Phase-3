@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Book a Taxi</title>
+</head>
+<script>
+function calcFare() {
+  document.getElementById("fair").style.backgroundColor = "yellow";
+  document.getElementById("fair").value=document.getElementById("distance").value*20;
+}
+</script>
+<body>
+
+<form action="/ride" method="post">
+
+	<table>
+		<tr>
+			<td>From :</td>
+			<td><input name="from"></td>
+		</tr>
+		
+		<tr><td> To :</td>
+		<td>
+		<input name="To" value="">
+		</td></tr>
+		<tr> <td>
+		 Distance in KM:</td>
+		 <td>
+		<input name="distance" type=number id="distance"  value="20">
+		</td>
+		</tr>
+		
+		<tr> <td>
+		 Fair :</td>
+		 <td>
+		<input name="fair" id="fair" value="">
+		<input type="button" type=number value="Calculate Fare" onclick="calcFare()">
+		</td>
+		</tr>	
+		<tr><td>
+		<input type="submit" value="Book">
+		</td></tr></table>
+
+
+		</form>
+</body>
+</html>
