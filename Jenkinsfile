@@ -4,7 +4,7 @@ pipeline {
   agent none
   stages {
     stage('Maven Install') {
-      agent {
+      agent any {
         docker {
           image 'maven:3.5.0'
         }
@@ -16,7 +16,7 @@ pipeline {
     stage('Docker Build') {
       agent any
       steps {
-        sh 'docker build -t shanem/spring-petclinic:latest .'
+        sh 'docker build -t shubrota/TaxiBooking:latest .'
       }
     }
   }
