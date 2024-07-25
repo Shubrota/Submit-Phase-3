@@ -9,7 +9,7 @@ pipeline
     {
       steps 
       {
-	call mvn install -f c:\Shubrota\caltech\phase 4\Submit-Phase-3\TaxiBooking\pom.xml
+	  call mvn clean install
       }
     }
     stage('Docker Build')
@@ -17,7 +17,7 @@ pipeline
       agent any
       steps 
       {
-        bat 'docker build -t shubrota/TaxiBooking:latest .'
+        call docker build -t shubrota/TaxiBooking:latest .
       }
     }
   }
