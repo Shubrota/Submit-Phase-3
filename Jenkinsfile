@@ -9,8 +9,7 @@ pipeline
     {
       steps 
       {
-	cd C:/Shubrota/caltech/phase 4/Submit-Phase-3/TaxiBooking
-        bat 'mvn clean install'
+	call mvn install -f c:\Shubrota\caltech\phase 4\Submit-Phase-3\TaxiBooking\pom.xml
       }
     }
     stage('Docker Build')
