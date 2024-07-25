@@ -1,16 +1,23 @@
 #!groovy
+
 pipeline {
-    agent { any { image 'node:12.16.2' args '-p 3000:3000' } }
-   stages {     
+  agent none
+  stages {
     stage('Maven Install') {
-      agent {         
-       docker {          
-         image 'maven:3.5.0'         
-     }       
-  }       
-  steps {
-       sh 'mvn clean install'
-       }
-     }
-   }
- }
+      agent {
+        docker {
+          image 'maven:3.5.0'
+        }
+      }
+      steps {
+        sh 'mvn clean install'
+      }
+    }
+    stage('Docker Build') {
+      agent any
+      steps {
+        sh 'docker build -t shanem/spring-petclinic:latest .'
+      }
+    }
+  }
+}
