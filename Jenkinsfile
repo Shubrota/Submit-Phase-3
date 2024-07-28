@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git 'https://github.com/Shubrota/Submit-Phase-3.git'
+                git branch: 'main', url: 'https://github.com/Shubrota/Submit-Phase-3.git'
 
                
 
