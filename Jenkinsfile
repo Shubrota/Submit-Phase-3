@@ -13,7 +13,7 @@ pipeline {
 
                
 
-                 bat "mvn  clean package"
+                 bat "C:/Shubrota/caltech/phase 4/Submit-Phase-3/mvn  clean package"
             }
 
             
