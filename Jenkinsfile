@@ -13,7 +13,7 @@ pipeline {
 
                
 
-                 bat "/mvn  clean package"
+                 call "mvn  clean package"
             }
 
             
